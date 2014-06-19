@@ -7,6 +7,7 @@
 //
 
 #import "NBViewController.h"
+#import "NetworkController.h"
 
 @interface NBViewController ()
 
@@ -17,7 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+//    UIImage *image = [[NetworkController sharedInstance] imageAtURL:@"http://evbdn.eventbrite.com/s3-s3/eventlogos/92022681/devevent.png"];
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+//    imageView.frame = CGRectMake(0, 64, 320, image.size.height / image.size.width * 320);
+//    
+//    [self.view addSubview:imageView];
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -21,6 +21,7 @@
 		7167C73E19525D7D00FD8F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C72019525D7C00FD8F55 /* UIKit.framework */; };
 		7167C74619525D7D00FD8F55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7167C74419525D7D00FD8F55 /* InfoPlist.strings */; };
 		7167C74819525D7D00FD8F55 /* Network_BankTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C74719525D7D00FD8F55 /* Network_BankTests.m */; };
+		7167C75319525DFB00FD8F55 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167C75219525DFB00FD8F55 /* NetworkController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		7167C74319525D7D00FD8F55 /* Network-BankTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Network-BankTests-Info.plist"; sourceTree = "<group>"; };
 		7167C74519525D7D00FD8F55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7167C74719525D7D00FD8F55 /* Network_BankTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network_BankTests.m; sourceTree = "<group>"; };
+		7167C75119525DFB00FD8F55 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		7167C75219525DFB00FD8F55 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				7167C72E19525D7C00FD8F55 /* Main.storyboard */,
 				7167C73119525D7C00FD8F55 /* NBViewController.h */,
 				7167C73219525D7C00FD8F55 /* NBViewController.m */,
+				7167C75119525DFB00FD8F55 /* NetworkController.h */,
+				7167C75219525DFB00FD8F55 /* NetworkController.m */,
 				7167C73419525D7C00FD8F55 /* Images.xcassets */,
 				7167C72319525D7C00FD8F55 /* Supporting Files */,
 			);
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7167C75319525DFB00FD8F55 /* NetworkController.m in Sources */,
 				7167C73319525D7C00FD8F55 /* NBViewController.m in Sources */,
 				7167C72D19525D7C00FD8F55 /* NBAppDelegate.m in Sources */,
 				7167C72919525D7C00FD8F55 /* main.m in Sources */,
