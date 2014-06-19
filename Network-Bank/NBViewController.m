@@ -9,7 +9,9 @@
 #import "NBViewController.h"
 #import "NetworkController.h"
 
-@interface NBViewController ()
+@interface NBViewController () <NetworkControllerDelegate>
+
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -18,12 +20,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.imageView = [UIImageView new];
+    [self.view addSubview:self.imageView];
     
-//    UIImage *image = [[NetworkController sharedInstance] imageAtURL:@"http://evbdn.eventbrite.com/s3-s3/eventlogos/92022681/devevent.png"];
-//    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-//    imageView.frame = CGRectMake(0, 64, 320, image.size.height / image.size.width * 320);
-//    
-//    [self.view addSubview:imageView];
+    NetworkController *networkController = [NetworkController new];
+    
+// Synchronous Request
+//    UIImage *image = [networkController imageAtURL:@"http://evbdn.eventbrite.com/s3-s3/eventlogos/92022681/devevent.png"];
+//    [self.imageView setImage:image];
+//    self.imageView.frame = CGRectMake(0, 64, 320, image.size.height / image.size.width * 320);
+
+    
+    
+// Asynchronous Request
+//    networkController.delegate = self;
+//    [networkController fetchImageAtURL:@"http://evbdn.eventbrite.com/s3-s3/eventlogos/92022681/devevent.png"];
 
 }
 
@@ -31,6 +43,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)networkDownloadedImage:(UIImage *)image {
+
+    [self.imageView setImage:image];
+    self.imageView.frame = CGRectMake(0, 64, 320, image.size.height / image.size.width * 320);
+
 }
 
 @end
